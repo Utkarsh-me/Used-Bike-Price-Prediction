@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto:eco/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/general%20classics/classics-genre-hero-1920x1080.jpg'); /* Replace with your image URL */
+            background-size: flex;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group select, .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group select:focus, .form-group input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #4CAF50; /* green color for positive results */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Car Price Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+    
+            <label for="kms">Kms Driven:</label>
+            <input type="number" id="kms" name="kms" placeholder="(e.g., 33000)" required>
+            <br><br>
+    
+            <label for="owner">Owner:</label>
+            <input type="numbers" id="owner" name="owner" placeholder="(e.g., 1)" required>
+            <br><br>
+
+            <label for="age">Age of Vehicle:</label>
+            <input type="numbers" id="age" name="age" placeholder="(e.g., 1)" required>
+            <br><br>
+
+            <label for="power">Power:</label>
+            <input type="numbers" id="power" name="power" placeholder="(e.g., 1)" required>
+            <br><br>
+
+            <label for="brand">Brand of Bike:</label>
+            <select id="brand" name="brand">
+                <option value="0">TVS</option>
+                <option value="1">Royal Enfield</option>
+                <option value="2">Yamaha</option>
+                <option value="3">Honda</option>
+                <option value="4">Hero</option>
+                <option value="5">Bajaj</option>
+                <option value="6">Suzuki</option>
+                <option value="7">KTM</option>
+                <option value="8">Mahindra</option>
+                <option value="9">Kawasaki</option>
+                <option value="10">Ducati</option>
+                <option value="12">Harley-Davidson</option>
+                <option value="13">Jawa</option>
+                <option value="14">BMW</option>
+                <option value="15">OTHER</option>
+
+
+            </select>
+            <br><br>
+    
+            <input type="submit" class="btn" value="Predict Selling Price">
+        </form>
+    </div>
+</body>
+</html>
